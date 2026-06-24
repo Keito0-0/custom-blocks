@@ -15,6 +15,8 @@ import java.util.function.Function;
 public class ModItems {
     public static final Item FLUORITE = registerItem("fluorite", Item::new);
 
+
+
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(CustomBlocks.MOD_ID, name),
                 function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(CustomBlocks.MOD_ID, name)))));
@@ -23,8 +25,8 @@ public class ModItems {
     public static void registerModItems() {
         CustomBlocks.LOGGER.info("Registering Mod Items for " + CustomBlocks.MOD_ID);
 
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((output, entries) -> {
-            entries.accept(FLUORITE);
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
+            output.accept(FLUORITE);
         });
     }
 }

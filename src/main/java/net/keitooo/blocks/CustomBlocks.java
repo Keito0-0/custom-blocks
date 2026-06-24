@@ -2,6 +2,7 @@ package net.keitooo.blocks;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.keitooo.blocks.item.ModItems;
 import net.minecraft.resources.Identifier;
 
 import org.slf4j.Logger;
