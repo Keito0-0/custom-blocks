@@ -5,11 +5,11 @@
 	"name": "Custom blocks",
 	"description": "Trying out minecraft moddin",
 	"authors": [
-		"Me!"
+		"Keitooo"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/Keito0-0/custom-blocks"
 	},
 	"license": "MIT-License",
 	"icon": "assets/custom-blocks/icon.png",

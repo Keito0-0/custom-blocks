@@ -13,10 +13,6 @@ public class CustomBlocks implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
-	}
-
-	public static Identifier id(String path) {
-		return Identifier.fromNamespaceAndPath(MOD_ID, path);
+		ModItems.registerModItems();
 	}
 }
