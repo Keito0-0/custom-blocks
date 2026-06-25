@@ -2,6 +2,8 @@ package net.keitooo.blocks;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.keitooo.blocks.block.ModBlocks;
+import net.keitooo.blocks.creativemodetab.ModCreativeModeTabs;
 import net.keitooo.blocks.item.ModItems;
 import net.minecraft.resources.Identifier;
 
@@ -14,6 +16,10 @@ public class CustomBlocks implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModCreativeModeTabs.registerModCreativeModeTabs();
+
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
+
 	}
 }
