@@ -15,6 +15,8 @@
   "block.custom-blocks.sunstone_fence": "Sunstone Fence",
   "block.custom-blocks.sunstone_fence_gate": "Sunstone Fence Gate",
   "block.custom-blocks.sunstone_wall": "Sunstone Wall",
+  "block.custom-blocks.sunstone_door": "Sunstone Door",
+  "block.custom-blocks.sunstone_trapdoor": "Sunstone Trapdoor",
 
   "creativemodetab.custom-blocks.custom_items": "Custom Items",
   "creativemodetab.custom-blocks.custom_blocks": "Custom Blocks"

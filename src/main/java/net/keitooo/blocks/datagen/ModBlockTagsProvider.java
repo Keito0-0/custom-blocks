@@ -25,7 +25,12 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
             .add(TagEntry.element(CustomBlocks.toId("deepslate_sunstone_ore")))
             .add(TagEntry.element(CustomBlocks.toId("sunstone_block")))
             .add(TagEntry.element(CustomBlocks.toId("sunstone_slab")))
-            .add(TagEntry.element(CustomBlocks.toId("sunstone_stairs")));
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_stairs")))
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_fence")))
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_fence_gate")))
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_wall")))
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_door")))
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_trapdoor")));
 
         getOrCreateRawBuilder(BlockTags.NEEDS_STONE_TOOL)
             .add(TagEntry.element(CustomBlocks.toId("sunstone_ore")));
@@ -33,11 +38,14 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         getOrCreateRawBuilder(BlockTags.NEEDS_IRON_TOOL)
             .add(TagEntry.element(CustomBlocks.toId("rose_gold_block")))
             .add(TagEntry.element(CustomBlocks.toId("deepslate_sunstone_ore")))
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_block")))
             .add(TagEntry.element(CustomBlocks.toId("sunstone_stairs")))
-            .add(TagEntry.element(CustomBlocks.toId("sunstone_slab")));
-
-        getOrCreateRawBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
-            .add(TagEntry.element(CustomBlocks.toId("sunstone_block")));
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_slab")))
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_fence")))
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_fence_gate")))
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_wall")))
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_door")))
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_trapdoor")));
 
         getOrCreateRawBuilder(BlockTags.STAIRS)
             .add(TagEntry.element(CustomBlocks.toId("sunstone_stairs")));
@@ -47,6 +55,10 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
             .add(TagEntry.element(CustomBlocks.toId("sunstone_button")));
         getOrCreateRawBuilder(BlockTags.PRESSURE_PLATES)
             .add(TagEntry.element(CustomBlocks.toId("sunstone_pressure_plate")));
+        getOrCreateRawBuilder(BlockTags.DOORS)
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_door")));
+        getOrCreateRawBuilder(BlockTags.TRAPDOORS)
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_trapdoor")));
 
         // SUPER IMPORTANT FOR THE FENCES AND WALLS TO CONNECT!!
         getOrCreateRawBuilder(BlockTags.FENCES)

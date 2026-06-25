@@ -28,6 +28,8 @@ public class ModModelProvider extends FabricModelProvider {
                 .fence(ModBlocks.SUNSTONE_FENCE)
                 .fenceGate(ModBlocks.SUNSTONE_FENCE_GATE)
                 .wall(ModBlocks.SUNSTONE_WALL);
+        blockModelGenerators.createDoor(ModBlocks.SUNSTONE_DOOR);
+        blockModelGenerators.createTrapdoor(ModBlocks.SUNSTONE_TRAPDOOR);
     }
 
     @Override

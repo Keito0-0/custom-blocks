@@ -29,12 +29,14 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
 
         dropSelf(ModBlocks.SUNSTONE_BLOCK);
         dropSelf(ModBlocks.SUNSTONE_STAIRS);
-        add(ModBlocks.SUNSTONE_SLAB, this::createSlabItemTable);
+        add(ModBlocks.SUNSTONE_SLAB, this::createSlabItemTable); // slab loot table
         dropSelf(ModBlocks.SUNSTONE_BUTTON);
         dropSelf(ModBlocks.SUNSTONE_PRESSURE_PLATE);
         dropSelf(ModBlocks.SUNSTONE_FENCE);
         dropSelf(ModBlocks.SUNSTONE_FENCE_GATE);
         dropSelf(ModBlocks.SUNSTONE_WALL);
+        dropSelf(ModBlocks.SUNSTONE_TRAPDOOR);
+        add(ModBlocks.SUNSTONE_DOOR, this::createDoorTable); // door loot table
 
         add(ModBlocks.SUNSTONE_ORE, createMultipleOreDrops(ModBlocks.SUNSTONE_ORE, ModItems.SUNSTONE, 2, 3));
         add(ModBlocks.DEEPSLATE_SUNSTONE_ORE, createMultipleOreDrops(ModBlocks.DEEPSLATE_SUNSTONE_ORE, ModItems.SUNSTONE, 3, 5));

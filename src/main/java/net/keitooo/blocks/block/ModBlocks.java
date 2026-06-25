@@ -87,6 +87,20 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
 
+    public static final Block SUNSTONE_DOOR = registerBlock("sunstone_door",
+            properties -> new DoorBlock(BlockSetType.IRON, properties
+                    .strength(4f)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)));
+
+    public static final Block SUNSTONE_TRAPDOOR = registerBlock("sunstone_trapdoor",
+            properties -> new TrapDoorBlock(BlockSetType.IRON, properties
+                    .strength(4f)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)));
+
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {

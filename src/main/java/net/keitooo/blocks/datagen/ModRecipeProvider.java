@@ -90,6 +90,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNSTONE_WALL, ModBlocks.SUNSTONE_BLOCK);
 
+                doorBuilder(ModBlocks.SUNSTONE_DOOR, Ingredient.of(ModItems.SUNSTONE))
+                        .unlockedBy(getHasName(ModItems.SUNSTONE), has(ModItems.SUNSTONE))
+                        .group("sunstone")
+                        .save(output);
+
+                trapdoorBuilder(ModBlocks.SUNSTONE_TRAPDOOR, Ingredient.of(ModItems.SUNSTONE))
+                        .unlockedBy(getHasName(ModItems.SUNSTONE), has(ModItems.SUNSTONE))
+                        .group("sunstone")
+                        .save(output);
+
             }
         };
     }
