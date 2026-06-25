@@ -27,9 +27,9 @@ public class ModItems {
     public static void registerModItems() {
         CustomBlocks.LOGGER.info("Registering Mod Items for " + CustomBlocks.MOD_ID);
 
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> { // Adds the item to the specified creative tab
-            output.accept(ROSE_GOLD_ALLOY);
-            output.accept(ROSE_GOLD_NUGGET);
-        });
+//        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> { // Adds the item to the specified creative tab
+//            output.accept(ROSE_GOLD_ALLOY);
+//            output.accept(ROSE_GOLD_NUGGET);
+//        });
     }
 }
