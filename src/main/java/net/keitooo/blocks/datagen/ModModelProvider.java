@@ -24,7 +24,10 @@ public class ModModelProvider extends FabricModelProvider {
                 .stairs(ModBlocks.SUNSTONE_STAIRS)
                 .slab(ModBlocks.SUNSTONE_SLAB)
                 .button(ModBlocks.SUNSTONE_BUTTON)
-                .pressurePlate(ModBlocks.SUNSTONE_PRESSURE_PLATE);
+                .pressurePlate(ModBlocks.SUNSTONE_PRESSURE_PLATE)
+                .fence(ModBlocks.SUNSTONE_FENCE)
+                .fenceGate(ModBlocks.SUNSTONE_FENCE_GATE)
+                .wall(ModBlocks.SUNSTONE_WALL);
     }
 
     @Override

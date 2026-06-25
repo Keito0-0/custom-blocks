@@ -37,6 +37,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SUNSTONE_SLAB);
                         output.accept(ModBlocks.SUNSTONE_BUTTON);
                         output.accept(ModBlocks.SUNSTONE_PRESSURE_PLATE);
+                        output.accept(ModBlocks.SUNSTONE_FENCE);
+                        output.accept(ModBlocks.SUNSTONE_FENCE_GATE);
+                        output.accept(ModBlocks.SUNSTONE_WALL);
 
                         output.accept(ModBlocks.ROSE_GOLD_BLOCK);
 

@@ -32,6 +32,9 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         add(ModBlocks.SUNSTONE_SLAB, this::createSlabItemTable);
         dropSelf(ModBlocks.SUNSTONE_BUTTON);
         dropSelf(ModBlocks.SUNSTONE_PRESSURE_PLATE);
+        dropSelf(ModBlocks.SUNSTONE_FENCE);
+        dropSelf(ModBlocks.SUNSTONE_FENCE_GATE);
+        dropSelf(ModBlocks.SUNSTONE_WALL);
 
         add(ModBlocks.SUNSTONE_ORE, createMultipleOreDrops(ModBlocks.SUNSTONE_ORE, ModItems.SUNSTONE, 2, 3));
         add(ModBlocks.DEEPSLATE_SUNSTONE_ORE, createMultipleOreDrops(ModBlocks.DEEPSLATE_SUNSTONE_ORE, ModItems.SUNSTONE, 3, 5));

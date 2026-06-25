@@ -71,12 +71,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNSTONE_SLAB, ModBlocks.SUNSTONE_BLOCK); // category, makes what, out of what
 
-                buttonBuilder(ModBlocks.SUNSTONE_BUTTON, Ingredient.of(ModBlocks.SUNSTONE_BLOCK))
-                        .unlockedBy(getHasName(ModBlocks.SUNSTONE_BLOCK), has(ModBlocks.SUNSTONE_BLOCK))
+                buttonBuilder(ModBlocks.SUNSTONE_BUTTON, Ingredient.of(ModItems.SUNSTONE))
+                        .unlockedBy(getHasName(ModItems.SUNSTONE), has(ModItems.SUNSTONE))
                         .group("sunstone")
                         .save(output);
 
-                pressurePlate(ModBlocks.SUNSTONE_PRESSURE_PLATE, ModBlocks.SUNSTONE_BUTTON);
+                pressurePlate(ModBlocks.SUNSTONE_PRESSURE_PLATE, ModItems.SUNSTONE);
+
+                fenceBuilder(ModBlocks.SUNSTONE_FENCE, Ingredient.of(ModItems.SUNSTONE))
+                        .unlockedBy(getHasName(ModItems.SUNSTONE), has(ModItems.SUNSTONE))
+                        .group("sunstone")
+                        .save(output);
+
+                fenceGateBuilder(ModBlocks.SUNSTONE_FENCE_GATE, Ingredient.of(ModItems.SUNSTONE))
+                        .unlockedBy(getHasName(ModItems.SUNSTONE), has(ModItems.SUNSTONE))
+                        .group("sunstone")
+                        .save(output);
+
+                wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNSTONE_WALL, ModBlocks.SUNSTONE_BLOCK);
 
             }
         };

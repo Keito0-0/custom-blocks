@@ -12,6 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.Function;
@@ -35,6 +36,7 @@ public class ModBlocks {
                     .strength(3f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
+
 
     public static final Block DEEPSLATE_SUNSTONE_ORE = registerBlock("deepslate_sunstone_ore",
             properties -> new DropExperienceBlock(UniformInt.of(2, 5),properties
@@ -67,6 +69,23 @@ public class ModBlocks {
                     .pushReaction(PushReaction.DESTROY)
                     .sound(SoundType.METAL)));
 
+    public static final Block SUNSTONE_FENCE = registerBlock("sunstone_fence",
+            properties -> new FenceBlock(properties
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)));
+
+    public static final Block SUNSTONE_FENCE_GATE = registerBlock("sunstone_fence_gate",
+            properties -> new FenceGateBlock(WoodType.OAK, properties
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)));
+
+    public static final Block SUNSTONE_WALL = registerBlock("sunstone_wall",
+            properties -> new WallBlock(properties
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)));
 
 
 

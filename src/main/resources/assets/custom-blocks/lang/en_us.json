@@ -12,6 +12,9 @@
   "block.custom-blocks.sunstone_slab": "Sunstone Slab",
   "block.custom-blocks.sunstone_button": "Sunstone Button",
   "block.custom-blocks.sunstone_pressure_plate": "Sunstone Pressure Plate",
+  "block.custom-blocks.sunstone_fence": "Sunstone Fence",
+  "block.custom-blocks.sunstone_fence_gate": "Sunstone Fence Gate",
+  "block.custom-blocks.sunstone_wall": "Sunstone Wall",
 
   "creativemodetab.custom-blocks.custom_items": "Custom Items",
   "creativemodetab.custom-blocks.custom_blocks": "Custom Blocks"

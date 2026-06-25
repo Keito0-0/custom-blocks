@@ -48,5 +48,13 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         getOrCreateRawBuilder(BlockTags.PRESSURE_PLATES)
             .add(TagEntry.element(CustomBlocks.toId("sunstone_pressure_plate")));
 
+        // SUPER IMPORTANT FOR THE FENCES AND WALLS TO CONNECT!!
+        getOrCreateRawBuilder(BlockTags.FENCES)
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_fence")));
+        getOrCreateRawBuilder(BlockTags.FENCE_GATES)
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_fence_gate")));
+        getOrCreateRawBuilder(BlockTags.WALLS)
+            .add(TagEntry.element(CustomBlocks.toId("sunstone_wall")));
+
     }
 }
