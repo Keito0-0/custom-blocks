@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> { // Items inside the tab
                         output.accept(ModItems.ROSE_GOLD_ALLOY);
                         output.accept(ModItems.ROSE_GOLD_NUGGET);
+                        output.accept(ModItems.CUSTOM_SHARD);
 
 
                     }).build());
@@ -32,7 +33,11 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativemodetab.custom-blocks.custom_blocks"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.ROSE_GOLD_BLOCK);
+                        output.accept(ModBlocks.ROSE_GOLD_STAIRS);
+                        output.accept(ModBlocks.ROSE_GOLD_SLAB);
+
                         output.accept(ModBlocks.YELLOW_BLOCK);
+
                         output.accept(ModBlocks.CUSTOM_ORE);
                         output.accept(ModBlocks.DEEPSLATE_CUSTOM_ORE);
 

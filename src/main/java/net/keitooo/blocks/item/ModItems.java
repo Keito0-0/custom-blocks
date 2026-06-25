@@ -15,6 +15,7 @@ import java.util.function.Function;
 public class ModItems {
     public static final Item ROSE_GOLD_ALLOY = registerItem("rose_gold_alloy", Item::new); // Registers a new item
     public static final Item ROSE_GOLD_NUGGET = registerItem("rose_gold_nugget", Item::new);
+    public static final Item CUSTOM_SHARD = registerItem("custom_shard", Item::new);
 
 
 

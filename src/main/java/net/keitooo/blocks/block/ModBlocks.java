@@ -9,14 +9,13 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.function.Function;
 
 public class ModBlocks {
+
     public static final Block ROSE_GOLD_BLOCK = registerBlock("rose_gold_block",
             properties -> new Block(properties
                     .strength(4f) // Breaking time
@@ -29,17 +28,31 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
 
-public static final Block CUSTOM_ORE = registerBlock("custom_ore",
+    public static final Block CUSTOM_ORE = registerBlock("custom_ore",
             properties -> new DropExperienceBlock(UniformInt.of(2, 5),properties
                     .strength(3f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
 
-public static final Block DEEPSLATE_CUSTOM_ORE = registerBlock("deepslate_custom_ore",
+    public static final Block DEEPSLATE_CUSTOM_ORE = registerBlock("deepslate_custom_ore",
             properties -> new DropExperienceBlock(UniformInt.of(2, 5),properties
                     .strength(4.5f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.DEEPSLATE)));
+
+    public static final Block ROSE_GOLD_STAIRS = registerBlock("rose_gold_stairs",
+            properties -> new StairBlock(ModBlocks.ROSE_GOLD_BLOCK.defaultBlockState(), properties
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
+
+    public static final Block ROSE_GOLD_SLAB = registerBlock("rose_gold_slab",
+            properties -> new SlabBlock(properties
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
+
+
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
@@ -57,4 +70,6 @@ public static final Block DEEPSLATE_CUSTOM_ORE = registerBlock("deepslate_custom
     public static void registerModBlocks(){
         CustomBlocks.LOGGER.info("Registering Mod Blocks for " + CustomBlocks.MOD_ID);
     }
+
+
 }

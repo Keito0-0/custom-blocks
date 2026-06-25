@@ -14,6 +14,10 @@ public class CustomBlocks implements ModInitializer {
 	public static final String MOD_ID = "custom-blocks";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+	public static Identifier toId(String path) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, path);
+    }
+
 	@Override
 	public void onInitialize() {
 		ModCreativeModeTabs.registerModCreativeModeTabs();
