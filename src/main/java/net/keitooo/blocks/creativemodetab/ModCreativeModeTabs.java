@@ -21,7 +21,7 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> { // Items inside the tab
                         output.accept(ModItems.ROSE_GOLD_ALLOY);
                         output.accept(ModItems.ROSE_GOLD_NUGGET);
-                        output.accept(ModItems.CUSTOM_SHARD);
+                        output.accept(ModItems.SUNSTONE);
 
 
                     }).build());
@@ -29,17 +29,19 @@ public class ModCreativeModeTabs {
 
     public static final CreativeModeTab CUSTOM_BLOCKS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
             Identifier.fromNamespaceAndPath(CustomBlocks.MOD_ID, "custom_blocks"),
-            FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ROSE_GOLD_BLOCK))
+            FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.SUNSTONE_BLOCK))
                     .title(Component.translatable("creativemodetab.custom-blocks.custom_blocks"))
                     .displayItems((parameters, output) -> {
+                        output.accept(ModBlocks.SUNSTONE_BLOCK);
+                        output.accept(ModBlocks.SUNSTONE_STAIRS);
+                        output.accept(ModBlocks.SUNSTONE_SLAB);
+                        output.accept(ModBlocks.SUNSTONE_BUTTON);
+                        output.accept(ModBlocks.SUNSTONE_PRESSURE_PLATE);
+
                         output.accept(ModBlocks.ROSE_GOLD_BLOCK);
-                        output.accept(ModBlocks.ROSE_GOLD_STAIRS);
-                        output.accept(ModBlocks.ROSE_GOLD_SLAB);
 
-                        output.accept(ModBlocks.YELLOW_BLOCK);
-
-                        output.accept(ModBlocks.CUSTOM_ORE);
-                        output.accept(ModBlocks.DEEPSLATE_CUSTOM_ORE);
+                        output.accept(ModBlocks.SUNSTONE_ORE);
+                        output.accept(ModBlocks.DEEPSLATE_SUNSTONE_ORE);
 
 
                     }).build());

@@ -15,20 +15,22 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
-        // blockModelGenerators.createTrivialCube(ModBlocks.ROSE_GOLD_BLOCK);
-        blockModelGenerators.createTrivialCube(ModBlocks.YELLOW_BLOCK);
-        blockModelGenerators.createTrivialCube(ModBlocks.CUSTOM_ORE);
-        blockModelGenerators.createTrivialCube(ModBlocks.DEEPSLATE_CUSTOM_ORE);
+        // blockModelGenerators.createTrivialCube(ModBlocks.SUNSTONE_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.ROSE_GOLD_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.SUNSTONE_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.DEEPSLATE_SUNSTONE_ORE);
 
-        blockModelGenerators.family(ModBlocks.ROSE_GOLD_BLOCK)
-                .stairs(ModBlocks.ROSE_GOLD_STAIRS)
-                .slab(ModBlocks.ROSE_GOLD_SLAB);
+        blockModelGenerators.family(ModBlocks.SUNSTONE_BLOCK)
+                .stairs(ModBlocks.SUNSTONE_STAIRS)
+                .slab(ModBlocks.SUNSTONE_SLAB)
+                .button(ModBlocks.SUNSTONE_BUTTON)
+                .pressurePlate(ModBlocks.SUNSTONE_PRESSURE_PLATE);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
         itemModelGenerators.generateFlatItem(ModItems.ROSE_GOLD_ALLOY, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.ROSE_GOLD_NUGGET, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.CUSTOM_SHARD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.SUNSTONE, ModelTemplates.FLAT_ITEM);
     }
 }

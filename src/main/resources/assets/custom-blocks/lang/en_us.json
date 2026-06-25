@@ -1,15 +1,17 @@
 {
   "item.custom-blocks.rose_gold_alloy": "Rose Gold Alloy",
   "item.custom-blocks.rose_gold_nugget": "Rose Gold Nugget",
-  "item.custom-blocks.custom_shard": "Custom Shard",
-
-  "block.custom-blocks.yellow_block": "Yellow Block",
-  "block.custom-blocks.custom_ore": "Custom Ore",
-  "block.custom-blocks.deepslate_custom_ore": "Deepslate Custom Ore",
+  "item.custom-blocks.sunstone": "Sunstone",
 
   "block.custom-blocks.rose_gold_block": "Block of Rose Gold",
-  "block.custom-blocks.rose_gold_stairs": "Rose Gold Stairs",
-  "block.custom-blocks.rose_gold_slab": "Rose Gold Slab",
+
+  "block.custom-blocks.sunstone_ore": "Sunstone Ore",
+  "block.custom-blocks.deepslate_sunstone_ore": "Deepslate Sunstone Ore",
+  "block.custom-blocks.sunstone_block": "Sunstone Block",
+  "block.custom-blocks.sunstone_stairs": "Sunstone Stairs",
+  "block.custom-blocks.sunstone_slab": "Sunstone Slab",
+  "block.custom-blocks.sunstone_button": "Sunstone Button",
+  "block.custom-blocks.sunstone_pressure_plate": "Sunstone Pressure Plate",
 
   "creativemodetab.custom-blocks.custom_items": "Custom Items",
   "creativemodetab.custom-blocks.custom_blocks": "Custom Blocks"

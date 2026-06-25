@@ -4,12 +4,10 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.keitooo.blocks.block.ModBlocks;
 import net.keitooo.blocks.item.ModItems;
-import net.minecraft.client.color.item.Dye;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -29,23 +27,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         return new RecipeProvider(registries, output) {
             @Override
             public void buildRecipes() {
-                List<ItemLike> ROSE_GOLD_SMELTABLES = List.of(ModBlocks.CUSTOM_ORE, ModBlocks.DEEPSLATE_CUSTOM_ORE); // list of smeltables
+                List<ItemLike> ROSE_GOLD_SMELTABLES = List.of(ModBlocks.SUNSTONE_ORE, ModBlocks.DEEPSLATE_SUNSTONE_ORE); // list of smeltables
 
-                oreSmelting(ROSE_GOLD_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.ROSE_GOLD_ALLOY, 0.25f, 200, "rose_gold"); // smelting
-                oreBlasting(ROSE_GOLD_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.ROSE_GOLD_ALLOY, 0.25f, 100, "rose_gold"); // blasting
+                oreSmelting(ROSE_GOLD_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.ROSE_GOLD_ALLOY, 0.25f, 200, "sunstone"); // smelting
+                oreBlasting(ROSE_GOLD_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.ROSE_GOLD_ALLOY, 0.25f, 100, "sunstone"); // blasting
 
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.ROSE_GOLD_ALLOY, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROSE_GOLD_BLOCK); // handles both packing and unpacking (so 1 block into 9 ingots and vice versa)
-                nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.CUSTOM_SHARD, RecipeCategory.MISC, ModBlocks.YELLOW_BLOCK);
+                nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.SUNSTONE, RecipeCategory.MISC, ModBlocks.SUNSTONE_BLOCK);
 
-                shaped(RecipeCategory.MISC, ModItems.CUSTOM_SHARD)
+                shaped(RecipeCategory.MISC, ModItems.SUNSTONE)
                         .pattern("XXX")
                         .pattern("XRX")
                         .pattern("XXX")
                         .define('R', Items.AMETHYST_SHARD)
-                        .define('X', Items.DYE.yellow())
-                        .unlockedBy(getHasName(ModItems.CUSTOM_SHARD), has(ModItems.CUSTOM_SHARD))
-                        .group("rose_gold") // recipe book shit
-                        .save(output, "custom_shard_from_amethyst_and_yellow_dye");
+                        .define('X', Items.GLOWSTONE_DUST)
+                        .unlockedBy(getHasName(ModItems.SUNSTONE), has(ModItems.SUNSTONE))
+                        .group("sunstone") // recipe book shit
+                        .save(output, "custom_shard_from_amethyst_and_glowstone");
 
                 shaped(RecipeCategory.MISC, ModItems.ROSE_GOLD_ALLOY)
                         .pattern("SSS")
@@ -66,12 +64,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .group("rose_gold")
                         .save(output, "rose_gold_alloy_from_copper_and_gold");
 
-                stairBuilder(ModBlocks.ROSE_GOLD_STAIRS, Ingredient.of(ModBlocks.ROSE_GOLD_BLOCK))
-                        .unlockedBy(getHasName(ModBlocks.ROSE_GOLD_BLOCK), has(ModBlocks.ROSE_GOLD_BLOCK))
-                        .group("rose_gold")
+                stairBuilder(ModBlocks.SUNSTONE_STAIRS, Ingredient.of(ModBlocks.SUNSTONE_BLOCK))
+                        .unlockedBy(getHasName(ModBlocks.SUNSTONE_BLOCK), has(ModBlocks.SUNSTONE_BLOCK))
+                        .group("sunstone")
                         .save(output);
 
-                slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROSE_GOLD_SLAB, ModBlocks.ROSE_GOLD_BLOCK); // category, makes what, out of what
+                slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNSTONE_SLAB, ModBlocks.SUNSTONE_BLOCK); // category, makes what, out of what
+
+                buttonBuilder(ModBlocks.SUNSTONE_BUTTON, Ingredient.of(ModBlocks.SUNSTONE_BLOCK))
+                        .unlockedBy(getHasName(ModBlocks.SUNSTONE_BLOCK), has(ModBlocks.SUNSTONE_BLOCK))
+                        .group("sunstone")
+                        .save(output);
+
+                pressurePlate(ModBlocks.SUNSTONE_PRESSURE_PLATE, ModBlocks.SUNSTONE_BUTTON);
 
             }
         };

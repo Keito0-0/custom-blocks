@@ -11,6 +11,8 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.Function;
 
@@ -22,34 +24,47 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops() // Drop only when mined with the correct block
                     .sound(SoundType.METAL))); // Place sound
 
-    public static final Block YELLOW_BLOCK = registerBlock("yellow_block",
+    public static final Block SUNSTONE_BLOCK = registerBlock("sunstone_block",
             properties -> new Block(properties
                     .strength(4f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
 
-    public static final Block CUSTOM_ORE = registerBlock("custom_ore",
+    public static final Block SUNSTONE_ORE = registerBlock("sunstone_ore",
             properties -> new DropExperienceBlock(UniformInt.of(2, 5),properties
                     .strength(3f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
 
-    public static final Block DEEPSLATE_CUSTOM_ORE = registerBlock("deepslate_custom_ore",
+    public static final Block DEEPSLATE_SUNSTONE_ORE = registerBlock("deepslate_sunstone_ore",
             properties -> new DropExperienceBlock(UniformInt.of(2, 5),properties
                     .strength(4.5f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.DEEPSLATE)));
 
-    public static final Block ROSE_GOLD_STAIRS = registerBlock("rose_gold_stairs",
-            properties -> new StairBlock(ModBlocks.ROSE_GOLD_BLOCK.defaultBlockState(), properties
+    public static final Block SUNSTONE_STAIRS = registerBlock("sunstone_stairs",
+            properties -> new StairBlock(ModBlocks.SUNSTONE_BLOCK.defaultBlockState(), properties
                     .strength(4f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.METAL)));
 
-    public static final Block ROSE_GOLD_SLAB = registerBlock("rose_gold_slab",
+    public static final Block SUNSTONE_SLAB = registerBlock("sunstone_slab",
             properties -> new SlabBlock(properties
                     .strength(4f)
                     .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
+
+    public static final Block SUNSTONE_BUTTON = registerBlock("sunstone_button",
+            properties -> new ButtonBlock(BlockSetType.IRON, 5, properties
+                    .strength(1f)
+                    .noCollision()
+                    .sound(SoundType.METAL)));
+
+    public static final Block SUNSTONE_PRESSURE_PLATE = registerBlock("sunstone_pressure_plate",
+            properties -> new PressurePlateBlock(BlockSetType.IRON, properties
+                    .strength(1f)
+                    .noCollision()
+                    .pushReaction(PushReaction.DESTROY)
                     .sound(SoundType.METAL)));
 
 
